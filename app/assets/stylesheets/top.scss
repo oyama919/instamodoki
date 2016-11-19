@@ -1,6 +1,13 @@
 // Place all the styles related to the Top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a{
+  font-size:16px;
+  margin-left: 20%;
+}
+header a{
+  margin: 0 auto;
+}
 input.btn{
   margin-bottom: 30px;
   padding: 10px;
@@ -9,5 +16,17 @@ input.btn{
   height: 40px;
 }
 h2{
-  text-align: center;
+  margin: 50px 0 30px 50%;
+}
+.field{
+  display: inline;
+  font: 1rem normal;
+}
+#user_remember_me{
+  margin-left: 45%;
+  width: 30px;
+  font: 16px normal;
+}
+label{
+  font:16px normal;
 }
