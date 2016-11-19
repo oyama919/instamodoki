@@ -1,0 +1,14 @@
+<%= form_for(@picture) do |f| %>
+  <%= f.label :タイトル %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :画像 %>
+  <P><img src="<%= @picture.image %>" ></P>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+  <br>
+  <%= f.label :記事内容 %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+<%= link_to "一覧にもどる", pictures_path %>

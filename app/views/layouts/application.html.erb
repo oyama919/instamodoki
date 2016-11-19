@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Instamodoki</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>
-  <p><%= notice %></p>
-  <h1 class="fl">インスタもどき</h1>
-  <form class="" action="index.html" method="post">
-
-  </form>
-  <ul class="fr block">
-    <li>safali</li>
-    <li>heart</li>
-    <li>person</li>
-  </ul>
-  <ul class="login">
-    <% if user_signed_in? %>
-    <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-    <% else %>
-    <li><%= link_to 'ログイン', new_user_session_path %></li>
-    <li><%= link_to 'サインイン', new_user_registration_path %></li>
-    <% end %>
-  </ul>
-</header>
-<%= yield %>
-
+    <head>
+        <title>Instamodoki</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default">
+                <h1 class="hdrh1">
+                    <a href="" class="navbar-brand">
+                        インスタもどき
+                    </a>
+                </h1>
+                <ul class="nav navbar-nav right">
+                    <% if user_signed_in? %>
+                    <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                    <li>
+                        <%= link_to 'ログイン', new_user_session_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'サインイン', new_user_registration_path %>
+                    </li>
+                    <% end %>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+    <p><%= notice %></p>
+      <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+        <%= yield %>
+      </div>
+    </div>
+</div>
 </body>
 </html>

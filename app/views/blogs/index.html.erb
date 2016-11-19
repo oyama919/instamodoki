@@ -1,10 +1,11 @@
 <h2>記事一覧</h2>
-<% @blogs.each do |blog| %>
-  <P>タイトル<%= blog.name %></P>
-  <P>本文<%= blog.content %></P>
-  <%= link_to  "ブログを編集する", edit_blog_path(blog.id) %>
-  <%= link_to  "ブログを削除する", blog_path(blog),method: :delete %>
+<% @pictures.each do |picture| %>
+  <P><%= picture.title %></P>
+  <P><%= picture.image %></P>
+  <p><%= picture.content %></p>
+  <%= link_to  "投稿を編集する", edit_picture_path(picture.id) %>
+  <%= link_to  "投稿を削除する", pictuer_path(picture),method: :delete %>
 <% end %>
 <br>
 <hr>
-<%= link_to "ブログを作成する" ,new_blog_path %>
+<%= link_to "新規投稿" ,new_picture_path %>

@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+html,body{
+  background: #FAFAFA;
+}
+.navbar-default {
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    border-radius: 0;
+    padding:0 30px;
+}
+
+.hdrh1{
+  margin: 0;
+  padding: 0;
+}
+.right li{
+  float:right;
+}
+input{
+  margin-bottom: 10px;
+}
