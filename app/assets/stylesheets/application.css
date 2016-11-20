@@ -39,3 +39,20 @@ a{
   display: block;
   text-align: center;
 }
+.edit img{
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+.edit{
+  text-align: center;
+}
+.edit input{
+  width:60%;
+  margin: 30px auto;
+}
+.button_to input{
+  width: 60%;
+  text-align: center;
+  margin: 0;
+}
