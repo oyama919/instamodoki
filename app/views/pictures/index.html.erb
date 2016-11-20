@@ -1,11 +1,35 @@
-<h2>記事一覧</h2>
-<% @pictures.each do |picture| %>
-  <P><%= picture.title %></P>
-  <P><img src="<%= picture.image %>" ></P>
-  <p><%= picture.content %></p>
-  <%= link_to  "投稿を編集する", edit_picture_path(picture.id) %>
-  <%= link_to  "投稿を削除する", picture_path(picture),method: :delete %>
-<% end %>
+<h2 class="kijih2">記事一覧</h2>
+
+    <% @pictures.each do |picture| %>
+    <article class="card">
+      <div class="card-header">
+            <% if picture.user.avatar.model.avatar.present? %>
+            <%= image_tag picture.user.avatar, size: "100x100",alt: "avatar" %>
+            <% elsif picture.user.image_url %>
+            <%= image_tag picture.user.image_url, size: "100x100",alt: "avatar" %>
+            <% else %>
+            <%= image_tag "no_image.png", size: "100x100",alt: "no_image" %>
+            <% end %>
+
+        <div class="title">
+            <h1>
+              タイトル：<%= picture.title %>
+            </h1>
+              <p><%= picture.user.name %>さんが投稿しました&nbsp;&nbsp;&nbsp;ID:&nbsp;&nbsp;<%= picture.user.id %></p>
+
+        </div>
+      </div>
+      <div class="card-block">
+        <P><img src="<%= picture.image %>"></P>
+      </div>
+      <div class="card-footer">
+          <p><%= picture.content %></p>
+      </div>
+      <%= link_to  "投稿を編集する", edit_picture_path(picture.id) %><br>
+      <%= link_to  "投稿を削除する", picture_path(picture),method: :delete %>
+    </article>
+    <% end %>
+
 <br>
 <hr>
 <%= link_to "新規投稿" ,new_picture_path %>

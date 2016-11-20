@@ -3,10 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 a{
   font-size:16px;
-  margin-left: 20%;
+  margin-left: 3%;
+  margin-bottom: 10px;
+}
+.topa a{
+  text-align: left;
+  margin: 0 0 0 20%;
+  line-height: 10px;
 }
 header a{
   margin: 0 auto;
+  font-size: 18px;
 }
 input.btn{
   margin-bottom: 30px;
@@ -29,4 +36,55 @@ h2{
 }
 label{
   font:16px normal;
+}
+.card{
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #FFF;
+  margin: 20px;
+  position: relative;
+}
+.card-header{
+  position: relative;
+  height: 100px;
+  padding: 30px 10px 10px 10px;
+}
+.card-header img{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 1px solid #eee;
+  // position: absolute;
+  // top: 25%;
+  // left:30px;
+}
+
+.title{
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.card-header h1{
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-style: normal;
+  font-size: 16px;
+}
+.card-header p{
+  margin: 0;
+  text-align: left;
+}
+.card-block{
+  width: 100%;
+  height: 100%;
+}
+.card-block p,img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.card-footer{
+  padding: 10px;
+  padding-bottom: 0px;
 }

@@ -29,14 +29,10 @@
                     <% end %>
                 </ul>
             </nav>
+        </header>
+        <p><%= notice %></p>
+        <div class="col-md-8 col-md-offset-2 col-sm-12 mb200">
+            <%= yield %>
         </div>
-    </header>
-    <div class="container">
-    <p><%= notice %></p>
-      <div class="col-md-8 col-md-offset-1 col-xs-10">
-        <%= yield %>
-      </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
